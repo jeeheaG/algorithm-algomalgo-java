@@ -38,7 +38,7 @@ K=4 : 1,3, 5,7, 9,11, 13,15
  */
 
 
-package boj.graph;
+package boj.tree;
 
 import java.io.*;
 import java.util.*;
