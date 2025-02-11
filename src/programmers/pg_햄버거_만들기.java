@@ -1,3 +1,5 @@
+package programmers;
+
 /**
 정해진 순서로 들어오면 햄버거 포장
 몇개 포장 가능?
@@ -8,7 +10,7 @@
 하나씩 넣음
 */
 
-class Solution {
+class pg_햄버거_만들기 {
     public int solution(int[] ingredient) {
         
         StringBuilder sb = new StringBuilder();

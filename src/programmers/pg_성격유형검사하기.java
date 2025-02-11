@@ -1,4 +1,4 @@
-// v1 : 구현 (2022 카카오 인턴 기출)
+package programmers;// v1 : 구현 (2022 카카오 인턴 기출)
 // TS : 문자목록에서 특정 문자의 위치와 특정 위치의 문자가 필요했음. 
     // String 의 .indexOf(), .charAt() 으로 해결
     // java string char 어렵다 . . .
@@ -22,9 +22,7 @@
 
 */
 
-import java.util.*;
-
-class Solution {
+class pg_성격유형검사하기 {
     public String solution(String[] survey, int[] choices) {
         String frontType = "RCJA";
         String backType = "TFMN";
