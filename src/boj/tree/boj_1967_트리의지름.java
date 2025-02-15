@@ -22,7 +22,7 @@ package boj.tree;
 import java.io.*;
 import java.util.*;
 
-public class boj_1967_트리수정 {
+public class boj_1967_트리의지름 {
     private static class Edge {
         int node;
         int weight;
