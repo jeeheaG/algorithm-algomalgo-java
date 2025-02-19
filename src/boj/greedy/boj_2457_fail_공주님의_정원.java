@@ -31,7 +31,7 @@ package boj.greedy;
 import java.io.*;
 import java.util.*;
 
-public class boj_2457_공주님의_정원 {
+public class boj_2457_fail_공주님의_정원 {
 
     static class Flower{
         int sMon, sDay, eMon, eDay;
