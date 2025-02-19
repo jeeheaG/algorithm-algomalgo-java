@@ -32,7 +32,7 @@ package boj.greedy;
 import java.io.*;
 import java.util.*;
 
-public class boj_8980_택배 {
+public class boj_8980_ing_택배 {
     static class Deliver{
         int from, to, box, len;
         public Deliver(int from, int to, int box, int len){
