@@ -1,5 +1,5 @@
-// fail : greedy, TLE
-// TLE(시간초과) 87% : 뭘까..뭘까 꽆이 아니라 시간을 돌아야 하나..
+// v1 : greedy
+// TLE(시간초과) 87% : 답이 없는 예외 케이스 처리 안해줬음
 
 /*
 [해석]
@@ -61,6 +61,8 @@ public class boj_2457_fail_공주님의_정원 {
 
         int cnt = 0;
         int[] maxEnd = cur.clone();
+        int[] prevMaxEnd = cur.clone();
+        boolean answerExist = true;
         while(true){
             for(Flower flower : flowers){
                 // 피어있는 꽃 중 가장 늦게 지는 날짜 갱신
@@ -76,16 +78,29 @@ public class boj_2457_fail_공주님의_정원 {
                 break;
             }
 
-            // 선택 후 종료날짜까지 끝났음
+            // 선택
             cnt++;
+
+            // 종료날짜까지 끝났음
             if(checkDate(end[0], end[1], maxEnd[0], maxEnd[1])){
+                break;
+            }
+            // 가능한 꽃이 없음. 답이 존재하지 않음
+            if(maxEnd[0] == prevMaxEnd[0] && maxEnd[1] == prevMaxEnd[1]){
+                answerExist = false;
                 break;
             }
 
             cur[0] = maxEnd[0];
             cur[1] = maxEnd[1];
+            prevMaxEnd = maxEnd.clone();
         }
-        System.out.print(cnt);
+
+        if(!answerExist){
+            System.out.print(0);
+        }else{
+            System.out.print(cnt);
+        }
     }
 
     // 현재 날짜에 피어있는지
